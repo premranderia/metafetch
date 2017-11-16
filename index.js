@@ -69,7 +69,7 @@ var parseMeta = function (url, options, body, header) {
 	response.uri = uri;
 
 	if (options.title) {
-		response.title = metaData['og:title'] || title;
+		response.title = title || metaData['og:title'];
 	}
 	if (options.description) {
 		response.description = metaData['og:description'] || metaData.description;
